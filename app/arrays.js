@@ -79,6 +79,13 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences: function(arr, target) {
+  	var indices = [];
 
+  	idx = arr.indexOf(arr(0));
+  	while (idx !== -1) {
+  		indices.push(idx);
+  		idx = arr.indexOf(target, idx + 1);
+  	}
+  	return indices;
   }
 };
